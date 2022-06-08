@@ -1,41 +1,51 @@
 export default [{
     id: 1,
     safe: true,
-    entry_to: "blue"
+    entry_to: "blue",
+    spirits:[]
 },{
     id: 2,
-    safe: false
+    safe: false,
+    spirits:[]
 },{
     id: 3,
-    safe: false
+    safe: false,
+    spirits:[]
 },
 {
     id: 4,
     safe: false,
-    entry_to: 'green'
+    entry_to: 'green',
+    spirits:[]
 },{
     id: 5,
-    safe: false
+    safe: false,
+    spirits:[]
 },
 {
     id: 6,
-    safe: false
+    safe: false,
+    spirits:[]
 },
 {
     id: 7,
     safe: false,
-    entry_to: "red"
+    entry_to: "red",
+    spirits:[]
 },{
     id: 8,
-    safe: false
+    safe: false,
+    spirits:[]
 },
 {
     id: 9,
-    safe: false
+    safe: false,
+    spirits:[]
 },
 {
     id: 10,
     safe: false,
-    entry_to: "yellow"
+    entry_to: "yellow",
+    spirits:[]
 }
 ]
