@@ -11,7 +11,7 @@ class Game extends Cli {
 
     play() {
         console.log(`this game will have ${this.player} players & ${this.spirit} spirits`);
-        let spirits = new Spirit(this.spirit, home)
+        let spirits = new Spirit(this.spirit, home[0].filled_space)
         spirits.create_new_spirits();
         
     }

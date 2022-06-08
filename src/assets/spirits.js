@@ -7,6 +7,8 @@ export class Spirit {
     
 
     create_new_spirits() {
+        // get the last id
+        this.storage
         for (let index = 0; index < this.spirits_num - 1; index++) {
             this.storage.push({
                 id: index + 1,
