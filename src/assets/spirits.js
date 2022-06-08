@@ -1,11 +1,12 @@
-class spirit {
-    constructor(spirits_num) {
+export class Spirit {
+    constructor(spirits_num, storage) {
         this.spirits = spirits_num;
+        this.storage = storage;
     }
 
-    storage = []
+    
 
-    create_new_spirits(color) {
+    create_new_spirits() {
         for (let index = 0; index < this.spirits_num - 1; index++) {
             this.storage.push({
                 id: index + 1,
@@ -18,10 +19,11 @@ class spirit {
         }
     }
 
-    movie_one_step() {
+    #movie_one_step(spirit_id) {
 
     }
-    move_spirit(id, steps) {
-        
+    
+    move_spirit(spirit_id, steps) {
+
     }
 }

@@ -3,11 +3,17 @@ import {
     game_cli
 } from './src/cli.js';
 
+import {Spirit} from './src/assets/spirits.js';
+import home from './src/assets/home.js'
+
 
 class Game extends Cli {
 
     play() {
         console.log(`this game will have ${this.player} players & ${this.spirit} spirits`);
+        let spirits = new Spirit(this.spirit, home)
+        spirits.create_new_spirits();
+        
     }
 
     async start() {
