@@ -3,7 +3,7 @@ import {
     game_cli
 } from './src/cli.js';
 
-import {Spirit} from './src/assets/spirits.js';
+import {Spirit} from './src/spirits.js';
 import home from './src/assets/home.js'
 
 
