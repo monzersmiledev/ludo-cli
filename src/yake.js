@@ -1,20 +1,23 @@
-class Yuke {
+export default class Yuke {
 
     // this array is used to save all the results from the random value function to check if the user 6 three times in row or not
-    storage = []
+    #storage = []
 
     /**
      * @description this method semulate the yake in the real ludo game
      * @returns {Number}
      */
-    saveRandomNumber() {
+    #randomNumber() {
         return Math.floor(Math.random() * 6);
     }
     
+    #callback({valid, steps}){
+
+    }
 
     /**
      * 
-     * @param {*} callback this will be called when the user get 6 on three time in row
+     * @param {*} callback this will be called to move the user spirits or if he got 6 three times in row will go to the next user
      */
     run(callback) {
 
@@ -22,7 +25,7 @@ class Yuke {
 
         // FIXME: instead of using a for loop u can use recursion with setTimeout i guess!
         for (let index = 0; index < this.storage[this.storage.length-1] == 6 && this.storage.length <= 2; index++) {
-            let randomValue = this.saveRandomNumber();
+            let randomValue = this.randomNumber();
             this.storage.push(randomValue);
             console.log("Yuke is checking...");
             console.log(`result is ${randomValue}`); 

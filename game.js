@@ -3,18 +3,12 @@ import {
     game_cli
 } from './src/cli.js';
 
-import {Spirit} from './src/spirits.js';
-import spirits_storage from './src/assets/spirits.js';
 
 class Game extends Cli {
 
     play() {
         console.log(`this game will have ${this.player} players & ${this.spirit} spirits`);
-        // defien new spirit for the game based on the number the user entered
-        let spirits = new Spirit(this.spirit, spirits_storage);
-
-        // create the spirits now and put them in there positions
-        spirits.create_new_spirits();
+        
 
 
         
