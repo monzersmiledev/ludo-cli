@@ -12,6 +12,7 @@ class Yuke {
         this.storage.push(randomNumber)
         return randomNumber;
     }
+    
 
     /**
      * 
