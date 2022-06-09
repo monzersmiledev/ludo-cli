@@ -9,10 +9,13 @@ let yake = new Yake()
 
 
 export default class Control extends Spirit {
-    constructor(spirit) {
+    constructor(spirit, player, spirit_storage) {
+
+        this.spirits = spirit;
+        this.players = player;
 
         // defien new spirit for the game based on the number the user entered
-        super(this.spirit, spirits_storage);
+        super(spirit, player, spirit_storage);
     }
 
 

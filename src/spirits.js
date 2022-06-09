@@ -1,7 +1,8 @@
 export class Spirit {
-    constructor(spirits_num, storage) {
+    constructor(spirits_num, players_num, storage) {
         this.spirits = spirits_num;
         this.storage = storage;
+        this.players = players_num;
     }
 
     colors = ["red", "blue", "yellow", "green"];
@@ -37,7 +38,7 @@ export class Spirit {
 
 
         //loop in the colors
-        for (let colorId = 0; colorId < this.colors.length; colorId++) {
+        for (let colorId = 0; colorId+1 < this.players; colorId++) {
             // create spirits based on the wanted number
             for (let spiritId = 0; spiritId < this.spirits; spiritId++) {
                 this.storage.push({

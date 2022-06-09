@@ -2,14 +2,15 @@ import {
     Cli,
     game_cli
 } from './src/cli.js';
-
+import Control from './src/control.js';
+import spirits_storage from './src/assets/spirits.js';
 
 class Game extends Cli {
 
     play() {
         console.log(`this game will have ${this.player} players & ${this.spirit} spirits`);
         
-
+        let control = new Control(this.spirit, this.player, spirits_storage);
 
         
     }
