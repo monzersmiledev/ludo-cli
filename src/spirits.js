@@ -5,11 +5,29 @@ export class Spirit {
     }
 
 
+/* TODO:
+this method should create all the spirit of the game and put each color in it's home
+and every spirit should have a unieq id and it's color
 
+the position of each spirit will be stored in the area it self 
+each block will save the id of eny spirit on it
+
+in e.g ig the block is safe then the game by it self will make all the yakes sit in the same block
+if it's not safe the the check_block method will kill the yake on the block if there is
+
+there's another method will run every time the yake will reach it's destination
+it's called check_area the main goal of this method is to search all the blocks and count the destinse between the yake and other anamy one
+and then print the number of blocks to arrive to it without counting the block after the home entry for the yake itself!
+
+FIXME: there is propebly nothing to fix here but I'm Fucked up with this game LOL 
+
+*/
+
+// TODO: write the algorithm for this method to finish it!!
     create_new_spirits() {
-        // get the last id
+        
         this.storage
-        for (let index = 0; index < this.spirits_num - 1; index++) {
+        for (let index = 0; index < this.spirits_num; index++) {
             this.storage.push({
                 id: index + 1,
                 color: color,
@@ -18,11 +36,22 @@ export class Spirit {
                     world_position_id: 1
                 }
             })
+            
         }
+        console.log(this.storage);
     }
 
     /**
-     * @description this method will check if the area the spirit landed in is safe or not and if the spirit will kill another one or not
+     * @description this method will check if the block the spirit landed in is safe or not and if the spirit will kill another one or not
+     * and will run only when the yake reach it's destination
+     */
+    #check_block(){
+
+    }
+
+    /**
+     * @description this method will check all the blocks after the home entry block for the yake 
+     * and write the destense between them and the arrived yake
      */
     #check_area() {
 

@@ -6,7 +6,8 @@
   "main": "game.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node game.js"
+    "start": "node game.js",
+    "debug": "node --inspect game.js"
   },
   "keywords": [],
   "author": "",

@@ -11,23 +11,26 @@ class Game extends Cli {
 
     play() {
         console.log(`this game will have ${this.player} players & ${this.spirit} spirits`);
-        let spirits = new Spirit(this.spirit, home[0].filled_space)
+        // defien new spirit for the game based on the number the user entered
+        let spirits = new Spirit(this.spirit, home);
+
+        // create the spirits now and put them in there positions
         spirits.create_new_spirits();
         
     }
 
     async start() {
         console.log("Hello There! \nWelcome To Lodo Game \n");
-        this.player = await this.players_num().catch((err) => {
-            console.log(err);
-
-            this.start();
+        await this.players_num().then((players) => {
+            this.player = players;
+            
         });
-        this.spirit = await this.spirit_num().catch((err) => {
-            console.log(err);
-
-            this.start();
+        
+        await this.spirit_num().then((spirits) => {
+            this.spirit = spirits
+            
         });
+        
         this.play();
 
         // end the game
