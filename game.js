@@ -4,13 +4,22 @@ import {
 } from './src/cli.js';
 import Control from './src/control.js';
 import spirits_storage from './src/assets/spirits.js';
+import { Spirit } from './src/spirits.js';
 
 class Game extends Cli {
 
     play() {
+
         console.log(`this game will have ${this.player} players & ${this.spirit} spirits`);
         
-        let control = new Control(this.spirit, this.player, spirits_storage);
+        // create new spirits
+        let spirits = new Spirit(this.spirit, this.player, spirits_storage);
+        spirits.create_new_spirits();
+
+        // pass the spirits object to the controller
+        let control = new Control(spirits);
+
+        control.runner();
 
         
     }
