@@ -1,3 +1,5 @@
+import starting_box from "./assets/starter.js"
+
 export class Spirit {
     constructor(spirits_num, players_num, storage) {
         this.spirits = spirits_num;
@@ -27,7 +29,7 @@ export class Spirit {
     */
 
     // put every spirit in it's home
-    #fill_home(spirit_storage) {
+    #fill_starting_box(spirit_storage, starting_points) {
 
 
     }
@@ -35,10 +37,10 @@ export class Spirit {
     // TODO: write the algorithm for this method to finish it!!
     create_new_spirits() {
 
-
+        this.storage = [];
 
         //loop in the colors
-        for (let colorId = 0; colorId+1 < this.players; colorId++) {
+        for (let colorId = 0; colorId < this.players; colorId++) {
             // create spirits based on the wanted number
             for (let spiritId = 0; spiritId < this.spirits; spiritId++) {
                 this.storage.push({
@@ -53,7 +55,7 @@ export class Spirit {
         console.log(this.storage);
 
         // fill the homes with it's spirits
-        this.fill_homes(this.storage);
+        this.fill_starting_box(this.storage, starting_box);
     }
 
     /**
