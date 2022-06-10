@@ -1,12 +1,19 @@
 import starting_box from "./assets/starter.js"
 
 export class Spirit {
+    /**
+     * @description using this class i will be able to create and move spirits in the game and probebly delete or reset them also
+     * @param {Number} spirits_num the number of spirits the user want to play with default is 4
+     * @param {Number} players_num number of players also default is 4
+     * @param {Object} storage the spirits storage (where i store all of them globaly)
+     */
     constructor(spirits_num, players_num, storage) {
         this.spirits = spirits_num;
         this.storage = storage;
         this.players = players_num;
     }
 
+    // this won't be collected by the garbeg collector because it's already assigend hehe :)
     colors = ["red", "blue", "yellow", "green"];
 
 
@@ -37,6 +44,7 @@ export class Spirit {
     // TODO: write the algorithm for this method to finish it!!
     create_new_spirits() {
 
+        // this will let the garbage collector delete all the unwanted spirits
         this.storage = [];
 
         //loop in the colors
@@ -75,7 +83,7 @@ export class Spirit {
 
     /**
      * @description this method will move a spirit one step and will call the check_area method
-     * @param {*} spirit_id 
+     * @param {Number} spirit_id 
      */
     #movie_one_step(spirit_id) {
 
@@ -83,8 +91,8 @@ export class Spirit {
 
     /**
      * @description this method will move a spirit and display deatils about the closest spirits to it
-     * @param {*} spirit_id 
-     * @param {*} steps 
+     * @param {Number} spirit_id 
+     * @param {Number} steps 
      */
     move_spirit(spirit_id, steps) {
 

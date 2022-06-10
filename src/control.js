@@ -3,8 +3,13 @@ import Yake from './yake.js';
 let yake = new Yake()
 
 export default class Control{
-    constructor(spirits) {
-        this.spirits = spirits;
+
+    /**
+     * @description this class responsble on controlling the whole game not just the spirits
+     * @param {Object} spirits_storage the spirits public storage so you can actully control them all
+     */
+    constructor(spirits_storage) {
+        this.spirits = spirits_storage;
 
     }
     
@@ -16,7 +21,14 @@ export default class Control{
     // whether i search for spirits in the game blocks or save a copy of every spirit with it's id in the spirit storage
     // i need to figure this out Wanna help me?
 
+    // TODO: you need more cli stuff here as u know CONTROLLER!
+
+    //move spesific spirit
+    // this.spirits.move_spirit("replace this with the spirit id")
+
     runner() {
+
+        // i should probebly use promise in this function and reject it when the user get 6 three times in a row
         yake.run()
     }
 }
