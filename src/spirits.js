@@ -1,4 +1,5 @@
-import starting_box from "./assets/starter.js"
+import starting_box from "./storage/starter.js";
+import blocks from './storage/blocks.js';
 
 export class Spirit {
     /**
@@ -35,12 +36,6 @@ export class Spirit {
 
     */
 
-    // put every spirit in it's home
-    #fill_starting_box(spirit_storage, starting_points) {
-
-
-    }
-
     // TODO: write the algorithm for this method to finish it!!
     create_new_spirits() {
 
@@ -67,25 +62,10 @@ export class Spirit {
     }
 
     /**
-     * @description this method will check if the block the spirit landed in is safe or not and if the spirit will kill another one or not
-     * and will run only when the spirit reach it's destination
-     */
-    #check_block() {
-
-    }
-
-    /**
-     * @description this method will check all the blocks after the home entry block for the spirit 
-     * and write the destense between them and the arrived spirit      */
-    #check_area() {
-
-    }
-
-    /**
      * @description this method will move a spirit one step and will call the check_area method
      * @param {Number} spirit_id 
      */
-    #movie_one_step(spirit_id) {
+    movie_one_step(spirit_id) {
 
     }
 
