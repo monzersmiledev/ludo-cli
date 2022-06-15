@@ -1,7 +1,7 @@
-export default class Yuke {
+export default class Dice {
 
     // this array is used to save all the results from the random value function to check if the user 6 three times in row or not
-    #storage = []
+    #storage = [];
 
     /**
      * @description this method semulate the yake in the real ludo game
@@ -11,15 +11,15 @@ export default class Yuke {
         return Math.floor(Math.random() * 6);
     }
     
-    #callback({valid, steps}){
+    #sendValue(valid, steps){
 
     }
 
     /**
      * 
-     * @param {*} callback this will be called to move the user spirits or if he got 6 three times in row will go to the next user
+     * @param {(err: string, Value: number)} callback this will be called to move the user spirits or if he got 6 three times in row will go to the next user
      */
-    run(callback) {
+     static run(callback) {
 
         // TODO: make sure if this is working when u get back to it
 

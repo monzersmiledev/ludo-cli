@@ -3,7 +3,7 @@ import {
     game_cli
 } from './src/cli.js';
 import Control from './src/control.js';
-import spirits_storage from './src/assets/spirits.js';
+import spirits_storage from './src/storage/spirits.js';
 import { Spirit } from './src/spirits.js';
 
 class Game extends Cli {

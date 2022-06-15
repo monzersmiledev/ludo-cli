@@ -1,6 +1,4 @@
-import Yake from './yake.js';
-
-let yake = new Yake()
+import Dice from './dice.js';
 
 export default class Control{
 
@@ -29,6 +27,8 @@ export default class Control{
     runner() {
 
         // i should probebly use promise in this function and reject it when the user get 6 three times in a row
-        yake.run()
+        Dice.run((err, value) => {
+
+        })
     }
 }
