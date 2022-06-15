@@ -17,7 +17,7 @@ export default class Dice {
 
     /**
      * 
-     * @param {(err: string, Value: number)} callback this will be called to move the user spirits or if he got 6 three times in row will go to the next user
+     * @param {(err: string, Value: number)} callback this will be called to move the user spirits or if he got 6 three times in row will go to the next user @argument err if the user get more than 18 @argument value the returned value
      */
      static run(callback) {
 
